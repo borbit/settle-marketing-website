@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "kalimahapps.tailwind-config-viewer",
+    "stivo.tailwind-fold",
+    "sanity-io.vscode-sanity"
+  ]
+}

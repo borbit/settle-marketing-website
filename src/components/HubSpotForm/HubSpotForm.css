@@ -1,0 +1,125 @@
+.hs-form {
+  @apply flex w-full text-base text-brand-black;
+
+  &:not([class*='flex-row']) {
+    @apply flex-col;
+  }
+
+  &[class*='flex-row'] {
+    @apply gap-2;
+
+    .hs-form-field {
+      @apply mb-0;
+    }
+  }
+
+  &:not([class*='items-']) {
+    @apply items-center;
+  }
+
+  &[class*='variant-dark'] {
+    .hs-form-field > div.input input {
+      @apply border-brand-dark-green bg-brand-dark-green py-3 text-brand-light-teal placeholder:text-current focus:border-brand-forest-green hover:border-gray-300;
+    }
+  }
+
+  a {
+    @apply cursor-pointer text-brand-forest-green no-underline underline-offset-4 visited:text-brand-forest-green hover:underline;
+  }
+
+  legend {
+    @apply text-sm text-gray-500;
+  }
+
+  .hs-form-field {
+    @apply relative mb-2 flex w-full flex-col;
+
+    & > label {
+      @apply order-1;
+    }
+
+    & > div.input {
+      @apply order-2 my-1;
+    }
+
+    & > legend.hs-field-desc {
+      @apply order-3 text-sm text-brand-grey;
+    }
+
+    .hs-error-msgs {
+      @apply order-4 text-sm text-red-500;
+    }
+
+    &.hs-fieldtype-radio {
+      & > legend.hs-field-desc {
+        @apply order-2;
+      }
+
+      & > div.input {
+        @apply order-3;
+      }
+
+      & > label {
+        @apply mb-2;
+      }
+
+      ul.inputs-list {
+        @apply space-y-2;
+
+        label.hs-form-radio-display {
+          @apply flex cursor-pointer items-center space-x-3 text-sm leading-normal;
+        }
+      }
+    }
+
+    select,
+    textarea,
+    input:not([type='radio']) {
+      @apply order-2 -mx-px w-full overflow-ellipsis rounded-lg border border-gray-300 px-4 py-2 leading-normal focus:border-brand-forest-green focus:ring-transparent hover:border-gray-300;
+    }
+
+    select {
+      @apply pr-8;
+    }
+
+    input[type='radio'] {
+      @apply border-2 text-brand-pine-green focus:ring-transparent hover:cursor-pointer;
+    }
+  }
+
+  .hs-richtext {
+    @apply mb-2 pb-1 pt-3 text-xs;
+  }
+
+  fieldset.form-columns-2 {
+    @apply grid w-full grid-cols-1 gap-x-3 sm:grid-cols-2;
+
+    div.hs-form-field {
+      @apply w-auto;
+
+      div.input {
+        @apply mr-0;
+      }
+    }
+  }
+
+  fieldset.form-columns-1 {
+    @apply grid w-full grid-cols-1;
+
+    .input {
+      @apply mr-0 w-full;
+
+      .hs-input {
+        @apply mr-0 w-full;
+      }
+    }
+  }
+
+  .hs_error_rollup {
+    @apply hidden;
+  }
+}
+
+.submitted-message {
+  @apply text-center text-lg;
+}

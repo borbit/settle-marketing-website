@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-base;
+  }
+
+  body {
+    @apply flex h-auto min-h-[100dvh] max-w-full flex-col items-stretch overflow-x-hidden bg-brand-stone text-brand-black;
+  }
+
+  html,
+  body {
+    @apply overscroll-none font-beausite antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  main {
+    @apply flex-1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-balance font-marr-sans;
+  }
+
+  h1 {
+    @apply text-[3.5rem] font-semibold leading-[104%] md:text-[4.25rem];
+  }
+
+  h2 {
+    @apply text-[3rem] font-semibold leading-[110%] md:text-[3.2rem];
+  }
+
+  h3 {
+    @apply text-[2.5rem] font-semibold leading-[105%];
+  }
+
+  h4 {
+    @apply text-[2rem] font-medium leading-[105%] md:font-semibold;
+  }
+
+  h5 {
+    @apply text-pretty font-beausite text-[1.3rem] font-medium leading-[120%];
+  }
+
+  h6 {
+    @apply text-pretty font-beausite font-normal tracking-[0.04em];
+  }
+
+  p {
+    /* Prevent text orphans (single words on last line) */
+    @apply text-pretty text-brand-dark;
+  }
+
+  small {
+    @apply mx-auto block text-center text-xs text-brand-grey;
+  }
+}
