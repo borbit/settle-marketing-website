@@ -10,7 +10,7 @@ module.exports = {
       typescript: {},
     },
   },
-  ignorePatterns: ['.next/*', 'node_modules/*', 'src/sanity/schemas/*'],
+  ignorePatterns: ['.next/*', 'node_modules/*'],
   env: {
     browser: true,
     node: true,
@@ -98,21 +98,6 @@ module.exports = {
         code: 120,
         ignoreTemplateLiterals: true,
         ignoreStrings: true,
-      },
-    ],
-    'no-restricted-imports': [
-      'error',
-      {
-        paths: [
-          {
-            name: 'next/link',
-            message: 'Please use @components/Link/Link instead for UTM params handoff support',
-          },
-          {
-            name: 'tailwind-merge',
-            message: 'Please use @lib/helpers/twMerge/twMerge instead for custom classnames support',
-          },
-        ],
       },
     ],
     'no-console': [

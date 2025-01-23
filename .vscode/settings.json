@@ -7,44 +7,11 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": [
-    "accountantslogosloop",
-    "Billpay",
-    "Ceremonia",
-    "consts",
-    "Delevan",
-    "financials",
-    "Ghia",
-    "hbspt",
-    "headlessui",
-    "heroicons",
-    "hookz",
-    "Hubspot",
-    "humanparser",
-    "Jiant",
-    "lalo",
-    "logosloop",
-    "navattic",
-    "payables",
-    "portabletext",
-    "postbuild",
-    "Quickbooks",
-    "sfdc",
-    "Snif",
-    "starface",
-    "stockouts",
-    "svgdotjs",
-    "Tait",
-    "thousandfell",
-    "toolbelt",
-    "typeform"
-  ],
   "multiCommand.commands": [
     {
       "command": "multiCommand.format_lint_save",
       "interval": 500,
       "sequence": ["eslint.executeAutofix", "workbench.action.files.saveWithoutFormatting"]
     }
-  ],
-  "vsicons.associations.files": [{ "icon": "vitest", "extensions": [".vi.ts"], "format": "svg" }]
+  ]
 }
