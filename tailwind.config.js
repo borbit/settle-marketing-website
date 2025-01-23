@@ -5,9 +5,6 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      aspectRatio: {
-        '4/3': '4 / 3',
-      },
       borderRadius: {
         '2.5xl': '1.25rem' /* 20px */,
         '3.5xl': '2rem' /* 32px */,
@@ -41,43 +38,13 @@ module.exports = {
           'dusty-pink': '#ffc6d1',
         },
       },
-      animation: {
-        'logos-loop': 'logos-loop 120s linear infinite',
-      },
-      keyframes: {
-        'logos-loop': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(calc(-50% - (theme(spacing.8) / 2)))' },
-        },
-      },
-      dropShadow: {
-        '3xl': '0 0.875rem 2.25rem rgba(0, 0, 0, 0.22)',
-      },
-      fontSize: {
-        unset: ['unset', { lineHeight: 'unset', letterSpacing: 'unset', fontWeight: 'unset' }],
-      },
       fontFamily: {
+        merriweather: ['var(--font-merriweather)', ...sans],
         inter: ['var(--font-inter)', ...sans],
-        'marr-sans': ['var(--font-marr-sans)', ...sans],
-        beausite: ['var(--font-beausite-classic)', ...sans],
-      },
-      backgroundImage: {
-        'hero-mobile': "url('/graphics/hero/home_mobile.png')",
-        'hero-desktop': "url('/graphics/hero/home_desktop.png')",
-      },
-      fontWeight: {
-        book: 350,
+        dm: ['var(--font-dm)', ...sans],
       },
     },
   },
-  corePlugins: { container: false },
   future: { hoverOnlyWhenSupported: true },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-    require('tailwindcss-inner-border'),
-    require('./plugins/tailwindcss/variants'),
-    require('./plugins/tailwindcss/utilities'),
-    require('./plugins/tailwindcss/components'),
-  ],
+  plugins: [require('@tailwindcss/aspect-ratio'), require('./plugins/tailwindcss/components')],
 }

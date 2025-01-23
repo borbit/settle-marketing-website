@@ -15,7 +15,7 @@ module.exports = ({ addComponents, theme }) => {
     cursor: 'pointer',
     padding: `${calcWithoutBorder(theme('spacing[3.5]'))} ${calcWithoutBorder(theme('spacing.6'))}`,
     fontSize: theme('fontSize.sm'),
-    fontFamily: theme('fontFamily.beausite'),
+    fontFamily: theme('fontFamily.dm'),
     fontWeight: theme('fontWeight.bold'),
     letterSpacing: theme('letterSpacing.wider'),
     lineHeight: '100%',
